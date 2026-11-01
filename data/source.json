@@ -1,0 +1,734 @@
+{
+ "site": "https://www.design8282.com",
+ "fetched": "2026-10-27",
+ "method": "Playwright(프레임 구조라 curl로는 본문 없음)",
+ "note": "홈페이지는 쇼핑몰형(제품 목록·주문 옵션). 시공 사례 갤러리는 없고, 사용후기 게시판 글 3건(사진 없음). 사진은 제품 사진(연출 촬영)이라 \"제품 사진\"으로 표기.",
+ "pages": [
+  {
+   "name": "메인",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/main/main.asp",
+   "summary": "로고 문구 \"공장직영 고퀄리티 Draw design\". \"무료방문 견적신청\" 배너. 추천·인기·신상품 목록. 하단: 고객센터 010-7680-0329, 근무시간 아침 7시~저녁 9시 365일 연중무휴, 카톡 kookoo2540, 상호 디자인그리다, 주소 대전광역시 유성구 유성대로 763 201호(장대동), 사업자 828-05-00330, 통신판매 2016-대전유성-0366, 대표 김용수, 전화 010-5566-4204."
+  },
+  {
+   "name": "회사소개",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/main/introduct.asp",
+   "summary": "쇼핑몰 인사말. 제품 문의 010-5566-4204(대표전화), 메일 kys84511@naver.com, 주소 대전 유성구 유성대로 763 201호."
+  },
+  {
+   "name": "이용안내",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/main/use01.asp",
+   "summary": "회원가입·주문 절차(상품선택→장바구니→주문→결제), 온라인입금·신용카드, 농협 계좌(예금주 김용수)."
+  },
+  {
+   "name": "무료 방문견적 신청",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/add/form1.asp",
+   "summary": "고객명·연락처·주소·예약일·예약시간(언제든지/오전/오후/특정시간). 설치장소: 거실·안방/침실·아이방/작은방·서재·베란다·사무실·상업공간·기타. 관심제품: 콤비롤스크린·롤스크린/버티칼·트리플쉐이드·우드·알루미늄·허니콤·홀딩도어·커튼. \"예약을 신청하시면 상담팀에서 연락을 드려 정확한 날짜와 시간을 조정\". 방문견적 리스트에 세종·경주 신청 기록."
+  },
+  {
+   "name": "사용후기 게시판",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/board3/list.asp",
+   "summary": "3건. 2021 \"시공감사드립니다 체인이라 좋은점도 있네요\"(경북 구미에서 달고 울산 이사 후 같은 상호 체인에서 시공), 2024 \"엉청 맘에들고 이뻐용\"과 답글."
+  },
+  {
+   "name": "게시판(board4)",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/board4/list.asp",
+   "summary": "글 없음."
+  },
+  {
+   "name": "제품 상세(공통 주문 옵션)",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71129211022",
+   "summary": "주문크기 가로×세로(cm), 손잡이방향 좌/우, 구성품 피스(철제·목공용·석고용·콘크리트), 설치방법(택배발송·설치요망·상담후결정). 허니콤 추가구성(원코드·SC 스탠다드/탑다운), 홀딩도어 편계·양계·중계. 가격은 회배 단가(기본회배 1~2)로 표시."
+  }
+ ],
+ "categories": [
+  {
+   "cat": "콤비롤스크린",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=2",
+   "sub": [
+    "우드룩",
+    "베이직",
+    "그라데이션",
+    "주름 포인트",
+    "디자인·패턴",
+    "스마트 콤비",
+    "실사 콤비",
+    "암막 콤비",
+    "방염 콤비"
+   ]
+  },
+  {
+   "cat": "항균블라인드",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=3",
+   "sub": [
+    "암막형",
+    "주름·포인트",
+    "일반형",
+    "방염"
+   ]
+  },
+  {
+   "cat": "롤스크린·버티칼",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=4",
+   "sub": [
+    "컬러무지",
+    "디자인·패턴",
+    "썬스크린",
+    "로고·실사 롤스크린",
+    "암막 롤스크린",
+    "방염 롤스크린",
+    "그래픽 롤 블라인드",
+    "레이져 쉐이드",
+    "버티컬 쉐이드",
+    "방염 버티컬"
+   ]
+  },
+  {
+   "cat": "트리플쉐이드",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=5",
+   "sub": [
+    "솔루스",
+    "베누스 쉐이드",
+    "그래픽 트리플 쉐이드",
+    "트리플 쉐이드",
+    "밴드 쉐이드"
+   ]
+  },
+  {
+   "cat": "우드블라인드",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=6",
+   "sub": [
+    "오동우드블라인드",
+    "R.G.B",
+    "오동나무(식물성천연)",
+    "포플러나무"
+   ]
+  },
+  {
+   "cat": "알루미늄",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=7",
+   "sub": [
+    "25mm 무지",
+    "25mm 타공&우드",
+    "50mm 무지",
+    "50mm 타공&우드"
+   ]
+  },
+  {
+   "cat": "허니콤쉐이드",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=8",
+   "sub": [
+    "듀오톤",
+    "풀톤",
+    "암막",
+    "방염 허니콤"
+   ]
+  },
+  {
+   "cat": "홀딩도어",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=9",
+   "sub": [
+    "한겹무지",
+    "한겹 무늬",
+    "한겹 투명",
+    "이중 무늬"
+   ]
+  },
+  {
+   "cat": "커튼",
+   "url": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/catalog.asp?category_num=10",
+   "sub": [
+    "암막커튼",
+    "무지커튼",
+    "디자인커튼"
+   ]
+  }
+ ],
+ "photos": [
+  {
+   "file": "/img/curtain-hj-darkgrey.jpg",
+   "w": 860,
+   "h": 578,
+   "shape": "wide",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "HJ암막 진그레이+연그레이 (견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712312610_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712312610",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/curtain-hj-darkgrey-2.jpg",
+   "w": 722,
+   "h": 539,
+   "shape": "wide",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "HJ암막 진그레이+연그레이 (견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712312610_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712312610",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/curtain-stone-blue.jpg",
+   "w": 860,
+   "h": 573,
+   "shape": "wide",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "스톤암막 아이보리+블루 (견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712311925_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712311925",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/curtain-hj-pink.jpg",
+   "w": 860,
+   "h": 578,
+   "shape": "wide",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "HJ암막 아이보리+핑크 (견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712312530_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712312530",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/curtain-mix.jpg",
+   "w": 860,
+   "h": 573,
+   "shape": "wide",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "벌집연출(견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71231257_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71231257",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/combi-pluto-beige.jpg",
+   "w": 860,
+   "h": 491,
+   "shape": "wide",
+   "topic": "combi",
+   "cat": "콤비롤스크린",
+   "product": "플루토블랙아웃-베이지",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71129211022_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71129211022",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/combi-pluto-grey.jpg",
+   "w": 860,
+   "h": 671,
+   "shape": "wide",
+   "topic": "combi",
+   "cat": "콤비롤스크린",
+   "product": "플루토블랙아웃-그레이",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7112921553_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7112921553",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/combi-pluto-grey-2.jpg",
+   "w": 835,
+   "h": 566,
+   "shape": "wide",
+   "topic": "combi",
+   "cat": "콤비롤스크린",
+   "product": "플루토블랙아웃-그레이",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7112921553_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7112921553",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/combi-bio-elis.jpg",
+   "w": 707,
+   "h": 523,
+   "shape": "wide",
+   "topic": "combi",
+   "cat": "항균블라인드",
+   "product": "바이오 엘리스투톤암막 - 4401",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/051912427_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=051912427",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/honeycomb-duotone.jpg",
+   "w": 860,
+   "h": 605,
+   "shape": "wide",
+   "topic": "honeycomb",
+   "cat": "허니콤쉐이드",
+   "product": "듀오톤 A-027모스그린TD",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/711291890_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=711291890",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/honeycomb-duotone-2.jpg",
+   "w": 858,
+   "h": 513,
+   "shape": "wide",
+   "topic": "honeycomb",
+   "cat": "허니콤쉐이드",
+   "product": "듀오톤 A-027모스그린TD",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/711291890_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=711291890",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/roll-tc-green.jpg",
+   "w": 852,
+   "h": 458,
+   "shape": "wide",
+   "topic": "roll",
+   "cat": "롤스크린·버티칼",
+   "product": "TC무지 그린",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71129201717_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71129201717",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/roll-laser.jpg",
+   "w": 810,
+   "h": 492,
+   "shape": "wide",
+   "topic": "roll",
+   "cat": "롤스크린·버티칼",
+   "product": "레이져쉐이드 메리고라운드",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113085351_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113085351",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/alu-25-wood.jpg",
+   "w": 840,
+   "h": 666,
+   "shape": "wide",
+   "topic": "alu",
+   "cat": "알루미늄",
+   "product": "25mm 타공&우드 w4103",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113012136_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113012136",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/alu-25-wood-2.jpg",
+   "w": 840,
+   "h": 560,
+   "shape": "wide",
+   "topic": "alu",
+   "cat": "알루미늄",
+   "product": "25mm 타공&우드 w4103",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113012136_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113012136",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/alu-wood-w302.jpg",
+   "w": 860,
+   "h": 573,
+   "shape": "wide",
+   "topic": "alu",
+   "cat": "알루미늄",
+   "product": "우드-W302",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130202146_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130202146",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/wood-odong-white.jpg",
+   "w": 818,
+   "h": 579,
+   "shape": "wide",
+   "topic": "wood",
+   "cat": "우드블라인드",
+   "product": "오동나무 블라인드 A-5010 화이트",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130185234_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130185234",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/wood-odong-white-2.jpg",
+   "w": 860,
+   "h": 503,
+   "shape": "wide",
+   "topic": "wood",
+   "cat": "우드블라인드",
+   "product": "오동나무 블라인드 A-5010 화이트",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130185234_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130185234",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/triple-grey.jpg",
+   "w": 860,
+   "h": 535,
+   "shape": "wide",
+   "topic": "triple",
+   "cat": "트리플쉐이드",
+   "product": "뉴트리플쉐이드-그레이(78)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130134951_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130134951",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/triple-newyork.jpg",
+   "w": 860,
+   "h": 573,
+   "shape": "wide",
+   "topic": "triple",
+   "cat": "트리플쉐이드",
+   "product": "뉴욕시티",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113072720_content.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113072720",
+   "note": "상세 이미지에서 사진 부분만 잘라냄"
+  },
+  {
+   "file": "/img/sq-curtain-hj-pink.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "HJ암막 아이보리+핑크 (견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712312530_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712312530"
+  },
+  {
+   "file": "/img/sq-curtain-stone-blue.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "스톤암막 진블루+블루 (견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712312052_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712312052"
+  },
+  {
+   "file": "/img/sq-curtain-dino-green.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "디노-아이보리+그린(견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712311227_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712311227"
+  },
+  {
+   "file": "/img/sq-curtain-hj-darkgrey.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "curtain",
+   "cat": "커튼",
+   "product": "HJ암막 진그레이+연그레이 (견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712312610_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712312610"
+  },
+  {
+   "file": "/img/sq-combi-woodlook.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "combi",
+   "cat": "콤비롤스크린",
+   "product": "우드룩-터키오즈",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/711280157_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=711280157"
+  },
+  {
+   "file": "/img/sq-combi-pluto-charcoal.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "combi",
+   "cat": "콤비롤스크린",
+   "product": "플루토블랙아웃-차콜",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71129205918_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71129205918"
+  },
+  {
+   "file": "/img/sq-combi-rainbow.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "combi",
+   "cat": "콤비롤스크린",
+   "product": "레인보우-아이보리",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71128234848_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71128234848"
+  },
+  {
+   "file": "/img/sq-combi-bio-vivian.jpg",
+   "w": 720,
+   "h": 720,
+   "shape": "square",
+   "topic": "combi",
+   "cat": "항균블라인드",
+   "product": "바이오 비비안 - 그레이",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/0519114057_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=0519114057"
+  },
+  {
+   "file": "/img/sq-combi-platan.jpg",
+   "w": 720,
+   "h": 720,
+   "shape": "square",
+   "topic": "combi",
+   "cat": "항균블라인드",
+   "product": "플라탄암막 - 그레이",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/0519123121_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=0519123121"
+  },
+  {
+   "file": "/img/sq-roll-tc-green.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "roll",
+   "cat": "롤스크린·버티칼",
+   "product": "TC무지 그린",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71129201717_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71129201717"
+  },
+  {
+   "file": "/img/sq-roll-laser-urban.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "roll",
+   "cat": "롤스크린·버티칼",
+   "product": "레이져쉐이드 어반스카이라인2",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/711292128_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=711292128"
+  },
+  {
+   "file": "/img/sq-vertical-solo.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "vertical",
+   "cat": "롤스크린·버티칼",
+   "product": "솔로-그린",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71211130_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71211130"
+  },
+  {
+   "file": "/img/sq-vertical-amuzen.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "vertical",
+   "cat": "롤스크린·버티칼",
+   "product": "아무젠-블루",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130232417_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130232417"
+  },
+  {
+   "file": "/img/sq-vertical-uni.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "vertical",
+   "cat": "롤스크린·버티칼",
+   "product": "유니-아이보리",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130211954_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130211954"
+  },
+  {
+   "file": "/img/sq-triple-solus.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "triple",
+   "cat": "트리플쉐이드",
+   "product": "솔루스-아이보리",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113063611_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113063611"
+  },
+  {
+   "file": "/img/sq-triple-cara.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "triple",
+   "cat": "트리플쉐이드",
+   "product": "카라",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113072213_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113072213"
+  },
+  {
+   "file": "/img/sq-triple-band.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "triple",
+   "cat": "트리플쉐이드",
+   "product": "밴드쉐이드-체리",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113014308_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113014308"
+  },
+  {
+   "file": "/img/sq-wood-odong-pink.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "wood",
+   "cat": "우드블라인드",
+   "product": "오동나무 블라인드 A-105 인디핑크",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130184717_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130184717"
+  },
+  {
+   "file": "/img/sq-wood-plus-920.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "wood",
+   "cat": "우드블라인드",
+   "product": "우드 플러스 - 9200",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7124173035_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7124173035"
+  },
+  {
+   "file": "/img/sq-wood-royal-r4.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "wood",
+   "cat": "우드블라인드",
+   "product": "뉴 로얄라이트 - R4700",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/712417649_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=712417649"
+  },
+  {
+   "file": "/img/sq-alu-502.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "alu",
+   "cat": "알루미늄",
+   "product": "25mm 노멀-502/블루",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130143920_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130143920"
+  },
+  {
+   "file": "/img/sq-alu-w303.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "alu",
+   "cat": "알루미늄",
+   "product": "우드-W303",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7113020238_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7113020238"
+  },
+  {
+   "file": "/img/sq-honeycomb-orange.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "honeycomb",
+   "cat": "허니콤쉐이드",
+   "product": "듀오톤 A-021오렌지",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/7112918316_middle.jpg",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=7112918316"
+  },
+  {
+   "file": "/img/sq-honeycomb-jade.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "honeycomb",
+   "cat": "허니콤쉐이드",
+   "product": "풀톤 B-504제이드",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71129192528_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71129192528"
+  },
+  {
+   "file": "/img/sq-folding-double.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "folding",
+   "cat": "홀딩도어",
+   "product": "이중무늬(견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130194445_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130194445"
+  },
+  {
+   "file": "/img/sq-folding-clear.jpg",
+   "w": 800,
+   "h": 800,
+   "shape": "square",
+   "topic": "folding",
+   "cat": "홀딩도어",
+   "product": "한겹투명-투명500(견적문의)",
+   "source": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/ftp/product/71130193943_middle.JPG",
+   "page": "https://www.design8282.com/xn--2i0bj7g70bpwhsyude/commerce/contents.asp?code=71130193943"
+  }
+ ],
+ "wordTopics": {
+  "암막커튼": [
+   "curtain"
+  ],
+  "암막커튼설치": [
+   "curtain"
+  ],
+  "커튼": [
+   "curtain"
+  ],
+  "맞춤커튼": [
+   "curtain"
+  ],
+  "커튼집": [
+   "curtain"
+  ],
+  "커튼설치": [
+   "curtain"
+  ],
+  "전동커튼": [
+   "curtain"
+  ],
+  "커튼블라인드": [
+   "curtain",
+   "combi",
+   "triple"
+  ],
+  "블라인드": [
+   "combi",
+   "wood",
+   "alu",
+   "triple",
+   "roll"
+  ],
+  "블라인드설치": [
+   "combi",
+   "wood",
+   "alu",
+   "honeycomb"
+  ],
+  "암막블라인드": [
+   "combi",
+   "honeycomb"
+  ],
+  "롤스크린": [
+   "roll",
+   "vertical"
+  ],
+  "콤비블라인드": [
+   "combi"
+  ],
+  "우드블라인드": [
+   "wood",
+   "alu"
+  ],
+  "버티컬블라인드": [
+   "vertical",
+   "roll"
+  ]
+ }
+}
