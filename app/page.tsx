@@ -1,9 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { cityHubs, pagePath } from '../lib/data';
 import { CONTACT } from '../lib/site';
 import { faqJsonLd, itemListJsonLd } from '../lib/jsonld';
 import { CATEGORIES, CAT_COVER, PHOTOS, photo, shortName } from '../lib/photos';
 import { Actions, FixedLinks, IconArrow, JsonLd, LightScale, SectionHead, Trio } from '../components/Common';
+
+export const metadata: Metadata = { alternates: { canonical: '/', types: { 'application/rss+xml': '/rss.xml' } } };
 
 // 홈페이지(design8282.com) 무료 방문견적 신청서 기준 절차
 const STEPS = [
