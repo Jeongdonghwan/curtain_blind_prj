@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { cityHubs, pagePath } from '../lib/data';
+import { getPosts, postPath } from '../lib/blog';
 import { CONTACT } from '../lib/site';
 import { faqJsonLd, itemListJsonLd } from '../lib/jsonld';
 import { CATEGORIES, CAT_COVER, PHOTOS, photo, shortName } from '../lib/photos';
@@ -37,6 +38,7 @@ const HERO = ['/img/curtain-hj-darkgrey.jpg', '/img/sq-combi-woodlook.jpg', '/im
 
 export default function Home() {
   const hubs = cityHubs();
+  const posts = getPosts().slice(0, 4);
   return (
     <main>
       <JsonLd data={[faqJsonLd(FAQ), itemListJsonLd(hubs.flatMap((h) => h.pages).slice(0, 30))]} />
@@ -141,6 +143,17 @@ export default function Home() {
           </div>
           <p data-reveal><Link href="/area/" className="more">전체 지역 페이지 <IconArrow /></Link></p>
         </section>
+        {posts.length > 0 && (
+          <section className="sec" id="blog">
+            <SectionHead title="고르기 전에 읽어 볼 글" sub="원단, 길이, 레일, 블라인드 방식처럼 실측 전에 자주 받는 질문에 한 편씩 답합니다." />
+            <ul className="post-list home-posts reveal-group">
+              {posts.map((p) => (
+                <li key={p.slug}><Link href={postPath(p)}><time dateTime={p.publishedAt}>{p.publishedAt.replace(/-/g, '.')}</time><strong>{p.title}</strong><span>{p.description}</span></Link></li>
+              ))}
+            </ul>
+            <p data-reveal><Link href="/blog/" className="more">글 전체 보기 <IconArrow /></Link></p>
+          </section>
+        )}
         <section className="sec stone faq-ed">
           <SectionHead title="자주 묻는 질문" sub="방문견적·주문 전에 확인할 내용입니다." />
           <div className="faq">{FAQ.map((f) => <details key={f.q} data-reveal><summary>{f.q}<i /></summary><p>{f.a}</p></details>)}</div>

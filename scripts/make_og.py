@@ -1,8 +1,8 @@
-"""OG 카드 생성: public/og/<slug>.jpg + home.jpg + area.jpg (1200x630, JPEG 80).
+"""OG 카드 생성: public/og/<slug>.jpg + home.jpg + area.jpg + blog.jpg + blog-<글 slug>.jpg (1200x630, JPEG 80).
 배경 = 디자인그리다 홈페이지 제품 사진(public/img, data/source.json). 페이지 히어로와 같은 사진을 고른다(lib/photos.ts photosFor 와 같은 규칙).
 글자는 네이버 정사각 자르기에 맞춰 가운데 630x630 안에 둔다.
 사용: python -I scripts/make_og.py [--force]   (브랜드·전화는 lib/site.ts에서 읽음, 있는 파일은 --force 없으면 건너뜀)"""
-import json, re, sys
+import datetime, json, os, re, sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance
 
@@ -71,12 +71,30 @@ def card(title, photo_file, out, label):
     im.save(out, 'JPEG', quality=80, optimize=True, progressive=True)
     return 1
 
+def blog_posts():
+    """content/blog/*.md ('_' 로 시작하면 비공개, date/publishedAt 이 빌드일보다 미래면 제외 — lib/blog.ts 와 같은 규칙)
+    → [(slug, keyword 또는 title, industry)]"""
+    today = os.environ.get('BUILD_DATE') or datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date().isoformat()
+    out = []
+    for f in sorted((ROOT / 'content' / 'blog').glob('*.md')):
+        if f.name.startswith('_'):
+            continue
+        raw = f.read_text(encoding='utf-8')
+        head = raw.split('---', 2)[1] if raw.startswith('---') else ''
+        meta = {k.strip(): v.strip().strip("'") for k, v in (l.split(':', 1) for l in head.splitlines() if ':' in l)}
+        if meta.get('slug') and (meta.get('date') or meta.get('publishedAt') or '') <= today:
+            out.append((meta['slug'], meta.get('keyword') or meta.get('title', ''), meta.get('industry') or '커튼'))
+    return out
+
 if __name__ == '__main__':
     od = ROOT / 'public/og'
     od.mkdir(parents=True, exist_ok=True)
     pages = json.loads((ROOT / 'data/site-pages.json').read_text(encoding='utf-8'))['pages']
     n = card('창 크기대로,|빛은 원하는 만큼', '/img/curtain-hj-darkgrey.jpg', od / 'home.jpg', '공장직영 커튼·블라인드')
     n += card('지역별 커튼·블라인드', '/img/curtain-stone-blue.jpg', od / 'area.jpg', '공장직영 커튼·블라인드')
+    n += card('커튼·블라인드 고르는 법', '/img/curtain-stone-blue.jpg', od / 'blog.jpg', '공장직영 커튼·블라인드')
+    for slug, kw, word in blog_posts():  # 블로그 글: blog-<slug>.jpg, 사진은 글 페이지 히어로와 같은 규칙
+        n += card(kw, hero_photo(word, f'blog-{slug}')['file'], od / f'blog-{slug}.jpg', '커튼·블라인드 고르는 법')
     for p in pages:
         if not p.get('variantOf'):  # 변형 페이지는 대표 페이지 이미지를 쓴다
             n += card(p['kw'], hero_photo(p['word'], p['slug'])['file'], od / f"{p['slug']}.jpg", p['word'])

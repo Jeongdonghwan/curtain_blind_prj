@@ -72,6 +72,7 @@ export const Header = () => (
         <Link href="/#products">제품</Link>
         <Link href="/#light">원단·방식</Link>
         <Link href="/area/">지역</Link>
+        <Link href="/blog/">블로그</Link>
         <a href={tel} className="nav-call"><IconPhone />{CONTACT.phone}</a>
       </nav>
     </div>
@@ -84,6 +85,7 @@ export const Footer = () => (
       <div>
         <strong className="foot-brand">{BRAND}</strong>
         <p>공장직영 커튼·블라인드. 커튼·콤비롤스크린·항균블라인드·롤스크린·버티칼·트리플쉐이드·우드·알루미늄·허니콤쉐이드·홀딩도어.</p>
+        <p className="foot-links"><Link href="/blog/">블로그</Link><Link href="/area/">지역별 안내</Link></p>
         {LINKS.length > 0 && <p className="foot-links">{LINKS.map((l) => <a key={l.url} href={l.url} target="_blank" rel="noopener">{l.label}</a>)}</p>}
       </div>
       <ul className="foot-info">

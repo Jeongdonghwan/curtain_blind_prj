@@ -30,3 +30,13 @@ export const itemListJsonLd = (items: { kw: string; slug: string }[]) => ({
   '@context': 'https://schema.org', '@type': 'ItemList',
   itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE_URL}/${encodeURIComponent(p.slug)}/`, name: p.kw })),
 });
+// 블로그 목록 캐러셀 (경로를 그대로 받음)
+export const pathListJsonLd = (items: { name: string; path: string }[]) => ({
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE_URL}${p.path}`, name: p.name })),
+});
+export const articleJsonLd = (o: { title: string; description: string; path: string; image: string; date: string }) => ({
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: o.title, description: o.description, image: o.image, datePublished: o.date, dateModified: o.date, inLanguage: 'ko',
+  mainEntityOfPage: `${SITE_URL}${o.path}`, author: { '@id': `${SITE_URL}/#business` }, publisher: { '@id': `${SITE_URL}/#business` },
+});
