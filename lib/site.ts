@@ -18,7 +18,7 @@ export const LINKS: { label: string; sub: string; url: string }[] = [
 
 // 사업자등록증 기준 (업태 도소매 / 종목 커튼 및 블라인드 — 표시 필드 없음)
 export const BUSINESS = {
-  name: '공장직영 디자인그리다 커튼 블라인드 세종점',
+  name: '공장직영 디자인그리다 커튼 블라인드',
   ceo: '김용수',
   bizNumber: '828-05-00330',
   address: '세종특별자치시 한누리대로 321, 107호(나성동, SR파크시티)',

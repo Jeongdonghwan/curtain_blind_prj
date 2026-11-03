@@ -44,7 +44,7 @@ export default function Home() {
             <p className="hero-lead">커튼부터 콤비·우드·알루미늄 블라인드, 롤스크린·버티칼, 허니콤·트리플쉐이드, 홀딩도어까지. 무료 방문견적으로 창을 재고 맞춰 답니다.</p>
             <Actions />
             <dl className="hero-specs">
-              <div><dt>매장</dt><dd>공장직영 디자인그리다 세종점</dd></div>
+              <div><dt>매장</dt><dd>공장직영 디자인그리다</dd></div>
               <div><dt>방문 견적</dt><dd>무료 신청</dd></div>
               <div><dt>상담 시간</dt><dd>07–21시 · 연중무휴</dd></div>
             </dl>
