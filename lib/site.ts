@@ -1,6 +1,6 @@
 // 사이트 설정 — 연락처·고정 링크·사업자 정보. TODO 표시는 업체 정보를 받으면 채운다.
 
-export const SITE_URL = process.env.SITE_URL || 'https://curtain-blind.example'; // TODO: 도메인 (빌드 때 SITE_URL 로 넣음)
+export const SITE_URL = process.env.SITE_URL || 'https://xn--2i0bj7g70bpwhsyude.kr'; // 디자인그리다.kr (퓨니코드)
 export const BRAND = '디자인그리다 커튼·블라인드';
 export const BRAND_EN = 'CURTAIN & BLIND';
 
