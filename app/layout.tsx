@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: { default: `${BRAND} | 암막커튼·맞춤커튼·블라인드 실측 설치`, template: '%s' },
   description: '커튼·블라인드 실측·제작·설치. 쉬폰·일반·암막 원단 비교, 콤비·우드·버티컬블라인드, 전동커튼.',
   robots: { index: true, follow: true },
+  verification: { google: 'KN_q3ViUF3NDzqjR0gFO1YuOtpGlsFEMiNhiswB698g', other: { 'naver-site-verification': 'b082d250ed3b9176496a302aa617054bea473334' } },
   alternates: { types: { 'application/rss+xml': `${SITE_URL}/rss.xml` } },
   openGraph: { type: 'website', siteName: BRAND, locale: 'ko_KR', images: ogImages('home', BRAND) },
   twitter: { card: 'summary_large_image', images: ogImages('home', BRAND) },
