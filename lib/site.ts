@@ -24,7 +24,7 @@ export const BUSINESS = {
   address: '세종특별자치시 한누리대로 321, 107호(나성동, SR파크시티)',
 };
 
-export const OPEN_WAVE = Number(process.env.OPEN_WAVE || 4); // 1~4 묶음 (scripts/import_pages.py 가 4등분)
+export const OPEN_WAVE = Number(process.env.OPEN_WAVE || 4); // 1~4 묶음 (scripts/import_pages.py 가 4등분) / 추가 5 = 11/15 · 6 = 11/17 · 7 = 11/19 각 500 (scripts/add_extra_pages.py)
 export const MERGE_VARIANTS = true;
 
 export const tel = `tel:${CONTACT.phone.replace(/[^0-9]/g, '')}`;

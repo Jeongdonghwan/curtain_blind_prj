@@ -25,7 +25,7 @@ export function getPage(slug: string) {
 export const hash = (s: string) => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h; };
 
 // 같은 시의 구 이름 (페이지마다 다른 고유 문장 재료)
-export const districtsOf = (city: string) => Array.from(new Set(ALL_PAGES.filter((p) => p.city === city && (p.level === '동' || p.level === '읍면') && !p.variantOf).map((p) => p.region)));
+export const districtsOf = (city: string) => Array.from(new Set(OPEN_PAGES.filter((p) => p.city === city && (p.level === '동' || p.level === '읍면') && !p.variantOf).map((p) => p.region)));
 
 export function cityHubs() {
   const order = ['대전광역시', '세종특별자치시', '충청남도', '충청북도', '전북특별자치도', '대구광역시', '경상북도', '경상남도', '울산광역시', '경기도'];
@@ -38,7 +38,7 @@ export function related(p: Page) {
   const rot = <T,>(arr: T[], n: number) => { if (!arr.length) return arr; const k = hash(p.slug) % arr.length; return [...arr.slice(k), ...arr.slice(0, k)].slice(0, n); };
   return {
     samePlace: pool.filter((x) => x.region === p.region).slice(0, 12),
-    sameCity: rot(pool.filter((x) => x.city === p.city && x.region !== p.region && x.word === p.word), 8),
+    sameCity: rot(pool.filter((x) => x.city === p.city && x.region !== p.region && x.word === p.word), 16),
     otherCities: rot(pool.filter((x) => x.city !== p.city && x.word === p.word && x.level === '시' && x.sido === p.sido), 8),
   };
 }

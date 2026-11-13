@@ -35,7 +35,7 @@ export function photosFor(word: string, slug: string) {
   const rest = rot(pool.filter((p) => p !== hero), `${slug}::gal`);
   // 첫 장은 가로 사진, 나머지는 정사각 섞어서
   const gallery = [...rest.filter((p) => p.shape === 'wide').slice(0, 1), ...rest.filter((p) => p.shape === 'square').slice(0, 2)];
-  return { hero, gallery: gallery.length >= 3 ? gallery : rest.slice(0, 3), cats: CATEGORIES.filter((c) => (WORD_CATS[word] || ['커튼']).includes(c.cat)) };
+  return { hero, gallery: gallery.length >= 3 ? gallery : rest.slice(0, 3), cats: CATEGORIES.filter((c) => (WORD_CATS[word] || ['커튼']).includes(c.cat)).map((c) => ({ ...c, sub: rot(c.sub, `${slug}::${c.cat}`).slice(0, 4) })) };
 }
 
 // 메인: 카테고리마다 대표 사진 1장
