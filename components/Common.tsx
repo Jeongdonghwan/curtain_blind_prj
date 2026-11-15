@@ -1,6 +1,6 @@
 // 커튼·블라인드 공통 UI — 각진 버튼, 선 아이콘, 왼쪽 정렬 세리프 섹션 머리(위 가는 선), 빛 막는 정도 비교, 고정 링크 띠.
 import Link from 'next/link';
-import { BRAND, BRAND_EN, CONTACT, BUSINESS, LINKS, tel, smsHref } from '../lib/site';
+import { BRAND, BRAND_EN, CONTACT, BUSINESS, LINKS, UPDATED, tel, smsHref } from '../lib/site';
 import { LIGHT } from '../lib/compose';
 
 export const JsonLd = ({ data }: { data: object | object[] }) => (
@@ -85,7 +85,7 @@ export const Footer = () => (
       <div>
         <strong className="foot-brand">{BRAND}</strong>
         <p>공장직영 커튼·블라인드. 커튼·콤비롤스크린·항균블라인드·롤스크린·버티칼·트리플쉐이드·우드·알루미늄·허니콤쉐이드·홀딩도어.</p>
-        <p className="foot-links"><Link href="/blog/">블로그</Link><Link href="/area/">지역별 안내</Link></p>
+        <p className="foot-links"><Link href="/about/">소개</Link><Link href="/blog/">블로그</Link><Link href="/area/">지역별 안내</Link></p>
         {LINKS.length > 0 && <p className="foot-links">{LINKS.map((l) => <a key={l.url} href={l.url} target="_blank" rel="noopener">{l.label}</a>)}</p>}
       </div>
       <ul className="foot-info">
@@ -98,7 +98,7 @@ export const Footer = () => (
         {BUSINESS.address && <li><span>주소</span>{BUSINESS.address}</li>}
       </ul>
     </div>
-    <div className="wrap foot-bottom">© {new Date().getFullYear()} {BRAND}</div>
+    <div className="wrap foot-bottom">© {new Date().getFullYear()} {BRAND} · 최종 수정 <time dateTime={UPDATED}>{UPDATED}</time></div>
   </footer>
 );
 
