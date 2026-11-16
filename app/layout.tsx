@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: `${BRAND} | 암막커튼·맞춤커튼·블라인드 실측 설치`, template: '%s' },
   description: '커튼·블라인드 실측·제작·설치. 쉬폰·일반·암막 원단 비교, 콤비·우드·버티컬블라인드, 전동커튼.',
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   verification: { google: 'KN_q3ViUF3NDzqjR0gFO1YuOtpGlsFEMiNhiswB698g', other: { 'naver-site-verification': 'b082d250ed3b9176496a302aa617054bea473334' } },
   alternates: { types: { 'application/rss+xml': `${SITE_URL}/rss.xml` } },
   openGraph: { type: 'website', siteName: BRAND, locale: 'ko_KR', images: ogImages('home', BRAND) },
@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <StickyBar />
         <Motion />
+        <script dangerouslySetInnerHTML={{ __html: "document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',k=h.indexOf('tel:')===0?'tel':h.indexOf('sms:')===0?'sms':/kakao/.test(h)?'kakao':'';if(k&&navigator.sendBeacon)navigator.sendBeacon('/_t?e='+k+'&p='+encodeURIComponent(location.pathname))},true)" }} />
       </body>
     </html>
   );
