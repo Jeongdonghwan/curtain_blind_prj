@@ -361,3 +361,27 @@ h1, h2, h3 { letter-spacing: -0.03em; line-height: 1.3; }
 .post-ul li { padding: 11px 0 11px 24px; border-bottom: 1px solid var(--line); position: relative; }
 .post-ul li::before { content: ''; position: absolute; left: 2px; top: 25px; width: 10px; height: 1px; background: var(--plum); }
 .related .rel-h { font-family: var(--serif); font-size: 1.04rem; margin: 0 0 6px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); }
+
+/* ---------- 키워드 페이지: h1 수식어 + 레이 구조 (2026-11-24) ---------- */
+.hero-cat { margin: 0 0 12px; font-size: .86rem; font-weight: 700; color: var(--plum); letter-spacing: .01em; }
+.hero-title .hero-sub { font-family: var(--sans); font-weight: 600; font-size: .46em; line-height: 1.4; letter-spacing: -0.02em; margin-top: 12px; color: var(--plum); }
+.ray-grid { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 56px; align-items: start; padding-top: 72px; padding-bottom: 24px; }
+.ray-sum { background: var(--plum-tint); border-top: 3px solid var(--plum); padding: 28px 30px 24px; margin-bottom: 36px; }
+.ray-sum h2 { margin: 0 0 12px; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.03em; color: var(--plum); }
+.ray-sum p { margin: 0 0 20px; line-height: 1.85; }
+.ray-sum dl, .ray-side dl { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 26px; margin: 0; }
+.ray-sum dl div, .ray-side dl div { border-left: 2px solid var(--plum-2); padding-left: 12px; }
+.ray-sum dt, .ray-side dt { font-size: .78rem; font-weight: 700; color: var(--muted); }
+.ray-sum dd, .ray-side dd { margin: 2px 0 0; font-size: .94rem; }
+.ray-article section { padding: 30px 0 12px; border-top: 1px solid var(--line); }
+.ray-article h2 { display: flex; align-items: baseline; gap: 12px; margin: 0 0 14px; font-family: var(--serif); font-size: clamp(1.2rem, 2.3vw, 1.48rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.4; }
+.ray-article h2 span { flex: none; font-family: var(--sans); font-size: .8rem; color: var(--plum); font-variant-numeric: tabular-nums; }
+.ray-article p { margin: 0 0 16px; font-size: 1.04rem; line-height: 1.9; max-width: 720px; }
+.ray-faq { margin-top: 36px; }
+.ray-faq h2 { margin: 0 0 18px; font-family: var(--serif); font-size: 1.42rem; font-weight: 700; }
+.ray-photos { margin-top: 44px; }
+.ray-side { position: sticky; top: 96px; border: 1px solid var(--line); border-top: 3px solid var(--ink); padding: 24px 22px; display: grid; gap: 16px; background: #fff; }
+.ray-side h3 { margin: 0; font-size: 1.04rem; font-weight: 800; }
+.ray-side dl { grid-template-columns: 1fr; }
+.ray-side .actions { flex-direction: column; align-items: stretch; }
+@media (max-width: 900px) { .ray-grid { grid-template-columns: 1fr; gap: 36px; padding-top: 48px; } .ray-side { position: static; } .ray-sum { padding: 22px 20px; } .ray-sum dl { grid-template-columns: 1fr; } }

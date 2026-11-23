@@ -37,7 +37,19 @@ export function compose(p: Page) {
     `${p.kw} — ${spot} 등 ${c.name} ${t === 'install' ? '실측·설치' : isBlind ? '블라인드' : '커튼'} 안내 | ${BRAND}`,
     `${p.kw} 상담 ${CONTACT.phone} | ${t === 'blackout' ? '암막 원단·설치 방식' : t === 'motor' ? '전동 레일·모터' : '원단·주름·레일'} 비교`,
   ], s, 'title');
-  const description = `${area} ${label}. ${home1} 창에 맞는 ${isBlind ? '블라인드 종류' : '원단·주름 방식'}, 빛 막는 정도 비교, 실측 체크 포인트. 상담 ${CONTACT.phone}.`;
+  // description 45~80자 (§5-3, 2026-11-24): 키워드 — 관련 키워드 2~3개 + 페이지 사실 + 상담 전화
+  const DREL: Record<Topic, [string[], (w: string) => string]> = {
+    blackout: [['코팅 암막', '짜임 암막', '레일 위 틈'], (w) => `${w}까지 비교하는 암막`],
+    curtain: [['나비주름', '아일렛', '속지'], (w) => `${w}까지 고르는 맞춤 커튼`],
+    blind: [['콤비', '롤스크린', '우드'], (w) => `${w} 중 창에 맞는 블라인드`],
+    motor: [['전동 레일', '모터', '콘센트 위치'], (w) => `${w}까지 보는 전동커튼`],
+    install: [['커튼박스', '브라켓', '레일'], (w) => `${w} 고정 방식부터 보는 설치`],
+    mix: [['커튼', '블라인드', '롤스크린'], (w) => `${j(w, '을')} 방마다 나눠 고르기`],
+  };
+  const [dw, dt] = DREL[t];
+  const dfact = near.length >= 2 ? `${near.slice(0, 2).join('·')} 등 이웃 동네도 방문 실측` : `${c.spots.filter((x) => !p.kw.includes(x.replace(/[동읍면]$/, '')))[0] || '집'} 쪽 창 방문 실측`;
+  const description = [3, 2].flatMap((n) => [`${p.kw} — ${dt(dw.slice(0, n).join('·'))}. ${dfact} ${CONTACT.phone}`, `${p.kw} — ${dt(dw.slice(0, n).join('·'))}. 상담 ${CONTACT.phone}`])
+    .find((x) => x.length <= 80) || `${p.kw} — ${dt(dw[0])}. ${CONTACT.phone}`;
 
   const lead = pick([
     `${area} 집 창 크기에 맞춰 원단과 방식을 고릅니다. 빛을 얼마나 막을지, 창을 얼마나 자주 여닫을지에 따라 답이 다릅니다.`,
@@ -143,7 +155,7 @@ export function compose(p: Page) {
     '암막 원단도 레일 위 틈은 못 막습니다. 커튼박스나 상부 가림을 같이 봅니다.',
     '창틀 안쪽에 블라인드를 달면 창 손잡이에 걸리는지 미리 봐야 합니다.',
     `${label} 치수를 직접 재서 보낼 때는 창틀 안쪽인지 바깥인지 함께 적어 주세요.`,
-  ], s, 'pit').slice(0, 2);
+  ], s, 'pit').slice(0, 3);
 
   const TYPES = [
     { name: '나비주름', d: pick(['주름을 일정하게 잡아 정돈돼 보입니다. 거실 겉커튼에 많이 씁니다.', '주름 간격이 고르게 잡혀 걷었을 때도 단정합니다.'], s, 'ty0') },
@@ -157,13 +169,13 @@ export function compose(p: Page) {
 
   // 실측 체크 포인트 — 5개 중 3개, 지역 주입
   const CHECKS: [string, string[]][] = [
-    ['창 폭은 세 군데', [`위·가운데·아래 폭을 재서 가장 좁은 값을 씁니다. ${home1}은 창틀이 미세하게 기운 경우가 있습니다.`, `${area} 구축 집은 창틀 폭이 위아래로 다를 때가 많습니다. 세 군데를 재는 이유입니다.`]],
+    ['창 폭은 세 군데', [`위·가운데·아래 폭을 재서 가장 좁은 값을 씁니다. ${j(home1, '은')} 창틀이 미세하게 기운 경우가 있습니다.`, `${area} 구축 집은 창틀 폭이 위아래로 다를 때가 많습니다. 세 군데를 재는 이유입니다.`]],
     ['커튼박스 깊이', [`커튼박스가 얕으면 레일 한 줄만 들어갑니다. 속지와 겉지를 함께 달려면 깊이부터 확인합니다.`, `${place} 아파트는 단지마다 커튼박스 깊이가 다릅니다. 실측 날 레일 개수를 정합니다.`]],
     ['바닥까지 길이', [`바닥 높이는 창가와 방 안쪽이 다를 수 있습니다. 끌리지 않게 가장 높은 곳 기준으로 맞춥니다.`, `커튼을 바닥에 살짝 띄울지, 닿게 할지에 따라 길이가 달라집니다. ${area} 상담에서 먼저 묻습니다.`]],
     ['창틀 안쪽 깊이', [`블라인드를 창틀 안에 달려면 손잡이에 걸리지 않을 만큼 깊이가 있어야 합니다.`, `${spot} 쪽 신축은 창틀이 얕은 경우가 있어 블라인드를 바깥에 다는 일이 많습니다.`]],
     ['벽 재질', [`콘크리트·석고보드·목재에 따라 브라켓 고정 방식이 다릅니다. 무거운 암막·우드는 특히 중요합니다.`, `${c.name} 주택은 벽 재질이 집마다 달라 설치 전에 확인합니다.`]],
   ];
-  const checks = rotate(CHECKS, s, 'chk').slice(0, 3).map(([k, v], i) => ({ t: k, d: pick(v, s, `ck${i}`) }));
+  const checks = rotate(CHECKS, s, 'chk').slice(0, 4).map(([k, v], i) => ({ t: k, d: pick(v, s, `ck${i}`) }));
   const checksHeading = pick([`${area}, 실측에서 보는 것`, '치수 재기 전에 볼 세 가지', `${label} 전에 실측부터`], s, 'ckh');
 
   const steps = [
@@ -196,8 +208,40 @@ export function compose(p: Page) {
   ];
   const faq = rotate([...regionFaq, ...bank[t], ...rotate(bank.mix, s, 'g').slice(0, 1), ...rotate(general, s, 'gn').slice(0, 3)], s, 'faq').filter((f, i, a) => a.findIndex((x) => x.q === f.q) === i).slice(0, 4);
 
+  // ---- 레이 모범 구조 (2026-11-24): 분류 줄 → h1(키워드+수식어) → 설명 → 핵심 요약 → 번호 절 6개(한 문단) → FAQ → 관련 링크 ----
+  // 규칙: ~/.claude/skills/programmatic-seo/references/composer-patterns.md §5-1·5-2·5-3. 위 재료 문장만 다시 묶는다(새 사실 없음).
+  const spotH = rotate(c.spots.filter((x) => !p.kw.includes(x.replace(/[동읍면]$/, ''))), s, 'h1spot')[0];
+  const H1: Record<Topic, string[]> = {
+    blackout: ['위·옆 틈까지 막는 레일 설치', '코팅·짜임 암막 원단 고르기'],
+    curtain: label === '커튼집' ? ['실측·샘플·설치까지 하는지 보기', '우리 집 창에 맞춰 주는지 확인하기'] : ['원단·주름·레일 세 가지로 고르기', '바닥 길이와 겉지·속지 정하기'],
+    blind: ['콤비·롤·우드 중 창에 맞는 종류', '창틀 안쪽·바깥 설치 위치 정하기'],
+    motor: ['콘센트 위치부터 보는 전동 레일', '원단 무게에 맞춘 모터 고르기'],
+    install: ['커튼박스·벽·천장 고정 방식 정하기', '실측부터 설치 점검까지'],
+    mix: ['방마다 커튼·블라인드 나눠 고르기', '한 창에 겹쳐 다는 방법까지'],
+  };
+  const spotSub: Record<Topic, string> = { blackout: '같은 단지 침실 창에 맞추기', curtain: '같은 단지 창, 실측부터 설치까지', blind: '같은 단지 창에 맞추기', motor: '같은 단지 거실 큰 창에 맞추기', install: '같은 단지 커튼박스에 맞추기', mix: '같은 단지 방마다 나눠 맞추기' };
+  const h1sub = pick([...H1[t], ...(spotH ? [`${spotH} ${spotSub[t]}`] : [])], s, 'h1sub');
+  const SEQ = ['먼저', '이어서', '그다음', '그 뒤에', '끝으로'];
+  const KW_AT = new Set([0, 1, 2, 4]);
+  const head = (i: number, subs: string[]) => { const sub = pick(subs, s, `rh${i}`); return KW_AT.has(i) ? `${p.kw}: ${sub}` : sub; };
+  const W = WORD[label] || ANGLE[t];
+  const raySummary = [
+    intro[0],
+    `${area} 상담은 창 사진으로 커튼박스와 창틀을 보고, 실측한 뒤 방마다 원단과 방식을 정합니다.`,
+    pick([`${area} 상담은 전화나 문자 ${CONTACT.phone}로 받습니다.`, `${area} 창 사진은 문자 ${CONTACT.sms}로 보내 주시면 됩니다.`], s, 'rsum'),
+  ].join(' ');
+  const raySections = [
+    { h: head(0, ['동네 집과 창', '지역 창 특징', '이 동네 집들의 창']), p: [pick([P2[0], P2[1], P2[3]].filter((x) => x !== intro[2]), s, 'rp'), `${area} 상담은 ${c.homes} 가운데 어느 쪽 집인지부터 여쭙니다. 창 크기와 커튼박스가 그에 따라 달라집니다.`, near.length ? P2[2] : '', W.length >= 4 ? pick(W.filter((x) => x !== intro[0]), s, 'w2') : ''].filter(Boolean).join(' ') },
+    { h: head(1, ['빛 막는 정도 고르기', '밝게 둘지 어둡게 할지', '쉬폰·일반·암막 원단 비교']), p: [a1, ...LIGHT.map((l) => `${j(l.name, '은')} ${lightText[l.key]}`), ANGLE[t].length > 2 ? a2 : ''].filter(Boolean).join(' ') },
+    { h: head(2, ['실측에서 보는 것', '치수 재기 전에 볼 것']), p: [`${area} 실측에서는 ${j(checks.map((x) => x.t).join(', '), '을')} 차례로 봅니다.`, ...checks.map((x) => x.d)].join(' ') },
+    { h: head(3, ['방마다 다르게', '공간별로 고르는 방식', '어느 방에 무엇을']), p: [`${area} 집은 ${rooms.map((r) => r.room).join(', ')} 순서로 봅니다.`, ...rooms.map((r) => r.text), pitfalls[2]].join(' ') },
+    { h: head(4, ['진행 순서', '상담부터 설치까지']), p: [`${area} ${j(label, '은')} ${steps.map((x) => x.t).join(', ')} 순서로 진행합니다.`, ...steps.map((x, i) => `${SEQ[i]} ${x.d}`), pitfalls[0]].join(' ') },
+    { h: head(5, ['고르기 전에 볼 것과 방식', '방식과 놓치기 쉬운 점']), p: [`실측 전에 확인해 둘 것은 ${signs.join(', ')}입니다.`, ...types.map((m) => `${j(m.name, '은')} ${m.d}`), pitfalls[1]].join(' ') },
+  ];
+  const ray = { cat: dong ? `${c.name} · ${last} · ${label}` : `${c.name} · ${label}`, h1sub, summary: raySummary, sections: raySections };
+
   return {
-    topic: t, city: c, area, title, description, lead, intro, rooms, signs, pitfalls, types, steps, faq, checks, checksHeading, lightOn, lightText,
+    topic: t, city: c, area, ray, title, description, lead, intro, rooms, signs, pitfalls, types, steps, faq, checks, checksHeading, lightOn, lightText,
     eyebrow: dong ? `${c.name} · ${last}` : c.name,
     specs: [['지역', area], [isBlind ? '종류' : '원단', isBlind ? '롤 · 콤비 · 우드 · 버티컬' : '쉬폰 · 일반 · 암막'], ...(near.length ? [['같은 시 동네', near.slice(0, 2).join(' · ')]] : []), ['방문 견적', '무료 신청']] as [string, string][],
     region: {
