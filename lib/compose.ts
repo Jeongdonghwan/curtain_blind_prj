@@ -220,7 +220,18 @@ export function compose(p: Page) {
     mix: ['방마다 커튼·블라인드 나눠 고르기', '한 창에 겹쳐 다는 방법까지'],
   };
   const spotSub: Record<Topic, string> = { blackout: '같은 단지 침실 창에 맞추기', curtain: '같은 단지 창, 실측부터 설치까지', blind: '같은 단지 창에 맞추기', motor: '같은 단지 거실 큰 창에 맞추기', install: '같은 단지 커튼박스에 맞추기', mix: '같은 단지 방마다 나눠 맞추기' };
-  const h1sub = pick([...H1[t], ...(spotH ? [`${spotH} ${spotSub[t]}`] : [])], s, 'h1sub');
+  // title 앞부분 = h1 (§5-1, 2026-11-24): "키워드 수식어"가 40자를 넘으면 더 짧은 벌을 고르고, 그래도 넘으면 구 단위로 자른다
+  const fitSub = (cands: string[]) => {
+    const max = 40 - p.kw.length - 1;
+    const r = rotate(cands, s, 'h1sub');
+    const ok = r.find((x) => x.length <= max);
+    if (ok) return ok;
+    const w = [...r].sort((a, b) => a.length - b.length)[0].split(' ');
+    while (w.length > 1 && w.join(' ').length > max) w.pop();
+    return w.join(' ');
+  };
+  const h1sub = fitSub([...H1[t], ...(spotH ? [`${spotH} ${spotSub[t]}`] : [])]);
+  const rayTitle = `${p.kw} ${h1sub} | ${'디자인그리다'}`; void title;
   const SEQ = ['먼저', '이어서', '그다음', '그 뒤에', '끝으로'];
   const KW_AT = new Set([0, 1, 2, 4]);
   const head = (i: number, subs: string[]) => { const sub = pick(subs, s, `rh${i}`); return KW_AT.has(i) ? `${p.kw}: ${sub}` : sub; };
@@ -241,7 +252,7 @@ export function compose(p: Page) {
   const ray = { cat: dong ? `${c.name} · ${last} · ${label}` : `${c.name} · ${label}`, h1sub, summary: raySummary, sections: raySections };
 
   return {
-    topic: t, city: c, area, ray, title, description, lead, intro, rooms, signs, pitfalls, types, steps, faq, checks, checksHeading, lightOn, lightText,
+    topic: t, city: c, area, ray, title: rayTitle, description, lead, intro, rooms, signs, pitfalls, types, steps, faq, checks, checksHeading, lightOn, lightText,
     eyebrow: dong ? `${c.name} · ${last}` : c.name,
     specs: [['지역', area], [isBlind ? '종류' : '원단', isBlind ? '롤 · 콤비 · 우드 · 버티컬' : '쉬폰 · 일반 · 암막'], ...(near.length ? [['같은 시 동네', near.slice(0, 2).join(' · ')]] : []), ['방문 견적', '무료 신청']] as [string, string][],
     region: {
