@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /*?_rsc=
+Disallow: /*/index.txt
+
+Sitemap: https://xn--2i0bj7g70bpwhsyude.kr/sitemap.xml
